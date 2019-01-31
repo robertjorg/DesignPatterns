@@ -7,14 +7,16 @@ using FactoryPattern.PizzaFactory;
 
 namespace FactoryPattern.PizzaFactory.FrameworkFactory.ChicagoStyle
 {
-    class ChicagoCheesePizza : FPizza
+    class ChicagoVeggiePizza : FPizza
     {
-        public ChicagoCheesePizza()
+        public ChicagoVeggiePizza()
         {
-            name = "Chicago Style Deep Dish ICheese Pizza";
+            name = "Chicago Style Deep Dish Veggie Pizza";
             dough = "Extra Thick Crust IDough";
             sauce = "Plum Tomato ISauce";
             toppings.Add("Shredded Mozzarella ICheese");
+            toppings.Add("Peppers");
+            toppings.Add("Other IVeggies you love");
         }
 
         public void cut()

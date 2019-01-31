@@ -18,6 +18,11 @@ namespace FactoryPattern.PizzaFactory.FrameworkFactory.ChicagoStyle
                 pizza = new ChicagoCheesePizza();
             }
 
+            if (type.Equals("veggie"))
+            {
+                pizza = new ChicagoVeggiePizza();
+            }
+
             return pizza;
         }
     }

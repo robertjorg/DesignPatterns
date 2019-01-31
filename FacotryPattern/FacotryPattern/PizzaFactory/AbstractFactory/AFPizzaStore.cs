@@ -7,13 +7,14 @@ using FactoryPattern.PizzaFactory.FrameworkFactory;
 
 namespace FactoryPattern.PizzaFactory
 {
-    public abstract class FPizzaStore
+    public abstract class AFPizzaStore
     {
-        public FPizza orderPizza(String type)
+        public AFPizza orderPizza(String type)
         {
-            FPizza pizza = createPizza(type);
+            AFPizza pizza = createPizza(type);
 
-            pizza.prepare();
+            Console.WriteLine("--- Making a " + pizza.GetName() + " ---");
+            pizza.Prepare();
             pizza.bake();
             pizza.cut();
             pizza.box();
@@ -23,6 +24,6 @@ namespace FactoryPattern.PizzaFactory
             return pizza;
         }
 
-        public abstract FPizza createPizza(string type);
+        protected abstract AFPizza createPizza(string paramString);
     }
 }

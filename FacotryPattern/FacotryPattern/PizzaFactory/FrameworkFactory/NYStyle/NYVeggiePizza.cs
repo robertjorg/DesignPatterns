@@ -5,16 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using FactoryPattern.PizzaFactory;
 
-namespace FactoryPattern.PizzaFactory.FrameworkFactory.NYStyle
+namespace FacotryPattern.PizzaFactory.FrameworkFactory.NYStyle
 {
-    class NYCheesePizza : FPizza
+    class NYVeggiePizza : FPizza
     {
-        public NYCheesePizza()
+        public NYVeggiePizza()
         {
             name = "NY Style ISauce and ICheese Pizza";
             dough = "Thin Crust IDough";
             sauce = "Marinara ISauce";
             toppings.Add("Grated Reggiano ICheese");
+            toppings.Add("Peppers");
+            toppings.Add("Other IVeggies you love");
         }
+        
     }
 }

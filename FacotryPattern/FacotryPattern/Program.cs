@@ -17,22 +17,54 @@ namespace FactoryPattern
             PizzaStore pizzaStore = new PizzaStore(simpleFactory);
             FPizzaStore fNYPizzaStore = new NYStylePizzaStore();
             FPizzaStore fChicagoStore = new ChicagoStylePizzaStore();
+            AFPizzaStore afNYPizzaStore = new AFNYStylePizzaStore();
+            AFPizzaStore chicagoPizzaStore = new AFChicagoStylePizzaStore();
 
-            Console.WriteLine("Simple Factory");
+            AFPizza pizza = afNYPizzaStore.orderPizza("cheese");
 
-            pizzaStore.orderPizza("cheese");
+            Console.Write(pizza.GetName() + "\n");
 
-            Console.ReadKey();
+            pizza = chicagoPizzaStore.orderPizza("cheese");
 
-            Console.WriteLine("Framework with New York Style Pizza");
+            Console.Write(pizza.GetName() + "\n");
 
-            fNYPizzaStore.orderPizza("cheese");
+            pizza = chicagoPizzaStore.orderPizza("veggie");
 
-            Console.ReadKey();
+            Console.Write(pizza.GetName() + "\n");
 
-            Console.WriteLine("Framework with Chicago Style Pizza");
+            pizza = afNYPizzaStore.orderPizza("veggie");
 
-            fChicagoStore.orderPizza("cheese");
+            Console.WriteLine(pizza.GetName() + "\n");
+
+            //Console.WriteLine("Simple Factory");
+
+            //pizzaStore.orderPizza("cheese");
+
+            //Console.WriteLine("\n");
+
+            //Console.WriteLine("Framework with New York Style ICheese Pizza");
+
+            //FPizza pizza =  fNYPizzaStore.orderPizza("cheese");
+
+            //Console.WriteLine("You ordered a " + pizza.GetName() + "\n");
+
+            //Console.WriteLine("Framework with New York Style Veggie Pizza");
+
+            //pizza = fNYPizzaStore.orderPizza("veggie");
+
+            //Console.WriteLine("You ordered a " + pizza.GetName() + "\n");
+
+            //Console.WriteLine("Framework with Chicago Style ICheese Pizza");
+
+            //pizza = fChicagoStore.orderPizza("cheese");
+
+            //Console.WriteLine("You ordered a " + pizza.GetName() + "\n");
+
+            //Console.WriteLine("Framework with Chicago Style Veggie Pizza");
+
+            //pizza = fChicagoStore.orderPizza("veggie");
+
+            //Console.WriteLine("You ordered a " + pizza.GetName() + "\n");
 
             Console.ReadKey();
         }
