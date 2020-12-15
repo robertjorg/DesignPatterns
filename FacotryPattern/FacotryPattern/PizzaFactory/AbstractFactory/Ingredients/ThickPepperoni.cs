@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace FacotryPattern.PizzaFactory.FrameworkFactory.Ingredients
 {
-    class SlicedPepperoni : IPepperoni
+    class ThickPepperoni : IPepperoni
     {
         public override string ToString()
         {
-            return "Sliced Pepperoni";
+            return "Thick Sliced Pepperoni";
         }
     }
 }

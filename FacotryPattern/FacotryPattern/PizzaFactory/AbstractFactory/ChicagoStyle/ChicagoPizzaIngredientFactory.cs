@@ -38,7 +38,7 @@ namespace FacotryPattern.PizzaFactory.FrameworkFactory.ChicagoStyle
 
         public IPepperoni CreatePepperoni()
         {
-            return new SlicedPepperoni();
+            return new ThickPepperoni();
         }
     }
 }

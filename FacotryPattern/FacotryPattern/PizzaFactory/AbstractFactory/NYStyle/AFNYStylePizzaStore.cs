@@ -28,6 +28,11 @@ namespace FactoryPattern.PizzaFactory.FrameworkFactory
                 pizza = new VeggiePizza(ingredientFactory);
                 pizza.SetName("New York Style Veggie Pizza");
             }
+            else if (item.Equals("pepperoni"))
+            {
+                pizza = new PepperoniPizza(ingredientFactory);
+                pizza.SetName("New York Style Pepperoni pizza");
+            }
 
             return pizza;
         }

@@ -36,6 +36,14 @@ namespace FactoryPattern
 
             Console.WriteLine(pizza.GetName() + "\n");
 
+            pizza = chicagoPizzaStore.orderPizza("pepperoni");
+
+            Console.Write(pizza.GetName() + "\n");
+
+            pizza = afNYPizzaStore.orderPizza("pepperoni");
+
+            Console.WriteLine(pizza.GetName() + "\n");
+
             //Console.WriteLine("Simple Factory");
 
             //pizzaStore.orderPizza("cheese");

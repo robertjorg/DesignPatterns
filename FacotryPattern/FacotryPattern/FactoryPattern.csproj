@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PizzaFactory\AbstractFactory\Ingredients\ThickPepperoni.cs" />
     <Compile Include="PizzaFactory\AbstractFactory\Pizzas\CheesePizza.cs" />
+    <Compile Include="PizzaFactory\AbstractFactory\Pizzas\PepperoniPizza.cs" />
     <Compile Include="PizzaFactory\AbstractFactory\Pizzas\VeggiePizza.cs" />
+    <Compile Include="PizzaFactory\ChickenBaconRanchPizza.cs" />
     <Compile Include="PizzaFactory\CheesePizza.cs" />
     <Compile Include="PizzaFactory\AbstractFactory\ChicagoStyle\ChicagoPizzaIngredientFactory.cs" />
     <Compile Include="PizzaFactory\AbstractFactory\ChicagoStyle\AFChicagoStylePizzaStore.cs" />
